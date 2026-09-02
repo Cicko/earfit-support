@@ -1,0 +1,81 @@
+:root {
+  color-scheme: light;
+  --ink: #11213d;
+  --muted: #526783;
+  --teal: #078b83;
+  --violet: #6553d7;
+  --line: #dbe5f1;
+  --wash: #f5f8fd;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
+  background: var(--wash);
+  color: var(--ink);
+  line-height: 1.55;
+}
+
+a { color: var(--teal); }
+
+header {
+  background: linear-gradient(135deg, #078b83 0%, #6553d7 100%);
+  color: white;
+  padding: 48px 24px 42px;
+}
+
+.wrap { max-width: 840px; margin: 0 auto; }
+
+.brand { display: flex; align-items: center; gap: 11px; font-size: 21px; font-weight: 800; }
+.brand-mark { width: 32px; height: 32px; border-radius: 11px; background: rgba(255,255,255,.18); display: grid; place-items: center; }
+
+nav { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 24px; }
+nav a { color: white; font-weight: 650; text-decoration: none; opacity: .92; }
+nav a:hover { opacity: 1; text-decoration: underline; }
+
+main { max-width: 840px; margin: 0 auto; padding: 48px 24px 64px; }
+
+.card {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: 30px;
+  box-shadow: 0 16px 50px rgba(52, 79, 117, .08);
+}
+
+.hero h1 { font-size: clamp(34px, 8vw, 56px); line-height: 1.05; margin: 0 0 16px; }
+.hero p { font-size: 20px; color: rgba(255,255,255,.9); max-width: 620px; margin: 0; }
+
+h1, h2 { line-height: 1.15; }
+h1 { margin: 0 0 14px; font-size: 40px; }
+h2 { margin-top: 34px; font-size: 24px; }
+p, li { color: var(--muted); }
+
+.contact {
+  background: linear-gradient(125deg, #e7f8f5, #eeeaff);
+  border: 1px solid #d8d3f6;
+  border-radius: 18px;
+  padding: 24px;
+  margin-top: 22px;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 12px 17px;
+  color: white;
+  background: linear-gradient(90deg, var(--teal), var(--violet));
+  border-radius: 12px;
+  font-weight: 750;
+  text-decoration: none;
+}
+
+footer { max-width: 840px; margin: 0 auto; padding: 0 24px 38px; color: var(--muted); font-size: 14px; }
+
+@media (max-width: 540px) {
+  header { padding-top: 34px; }
+  .card { padding: 23px; border-radius: 18px; }
+  main { padding-top: 30px; }
+}
